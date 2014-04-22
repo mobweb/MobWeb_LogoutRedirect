@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MobWeb_LogoutRedirect>
+            <version>0.1.0</version>
+        </MobWeb_LogoutRedirect>
+    </modules>
+    <global>
+        <models>
+            <logoutredirect>
+                <class>MobWeb_LogoutRedirect_Model</class>
+            </logoutredirect>
+        </models>
+        <helpers>
+            <logoutredirect>
+                <class>MobWeb_LogoutRedirect_Helper</class>
+            </logoutredirect>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_postdispatch_customer_account_logout>
+                <observers>
+                    <logoutredirect>
+                        <type>singleton</type>
+                        <class>logoutredirect/observer</class>
+                        <method>controllerActionPostdispatchCustomerAccountLogout</method>
+                    </logoutredirect>
+                </observers>
+            </controller_action_postdispatch_customer_account_logout>
+        </events>
+    </frontend>
+ </config>

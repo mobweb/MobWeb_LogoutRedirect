@@ -1,0 +1,6 @@
+app/code/community/MobWeb/LogoutRedirect app/code/community/MobWeb/LogoutRedirect/
+
+app/etc/modules/MobWeb_LogoutRedirect.xml app/etc/modules/MobWeb_LogoutRedirect.xml
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"
